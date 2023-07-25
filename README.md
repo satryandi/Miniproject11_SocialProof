@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/social-proof-section-bfnJqbha0O
 - Live Site URL: https://satryandi-miniproject11.netlify.app/
 
 ## My process
