@@ -1,0 +1,384 @@
+/* CSS Reset */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+}
+
+/*
+7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+/* General Styling */
+
+:root {
+    /*Colors*/
+    /*Primary*/
+    --primarycolor1: hsl(300, 43%, 22%);
+    --primarycolor2: hsl(333, 80%, 67%);
+
+    /*Neutral*/
+    --neutralcolor1: hsl(303, 10%, 53%);
+    --neutralcolor2: hsl(300, 24%, 96%);
+    --neutralcolor3: hsl(0, 0%, 100%);
+
+    /*Typography*/
+    /*Body Copy*/
+    --fs-primary: 15px;
+
+    /*Font*/
+    --ff-primary: 'League Spartan', sans-serif;
+    --fw400: 400;
+    --fw500: 500;
+    --fw700: 700;
+}
+
+body {
+    background-image:
+        url(images/bg-pattern-top-mobile.svg),
+        url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat:
+        no-repeat,
+        no-repeat;
+    background-position: left top, right bottom -25rem;
+    background-color: var(--neutralcolor3);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-primary);
+
+    text-align: center;
+}
+
+.card {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.title {
+    color: var(--primarycolor1);
+    font-weight: var(--fw700);
+    padding: 0 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about {
+    color: var(--neutralcolor1);
+    font-weight: var(--fw500);
+    line-height: 1rem;
+    padding: 0 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.ratings {
+    margin-bottom: 2rem;
+}
+
+.rating {
+    background-color: var(--neutralcolor2);
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+.rated {
+    padding: .5rem;
+    color: var(--primarycolor1);
+    font-weight: var(--fw700);
+}
+
+.rated::before {
+    content: "";
+    width: 100px;
+    height: 1rem;
+    margin: 0 auto;
+    display: block;
+    background-image: url(images/icon-star.svg);
+    background-repeat: space;
+}
+
+.reviews {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+}
+
+.review {
+    text-align: start;
+    background-color: var(--primarycolor1);
+    border-radius: .5rem;
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+}
+
+.profile img {
+    border: none;
+    border-radius: 50%;
+    width: 12%;
+    height: 12%;
+}
+
+.name {
+    color: var(--neutralcolor2);
+    font-weight: var(--fw500);
+}
+
+.status {
+    color: var(--primarycolor2);
+    margin-top: -.5rem;
+}
+
+.description {
+    line-height: 1.3rem;
+    margin-top: 1rem;
+    color: var(--neutralcolor3);
+}
+
+@media (min-width:375px) {
+    body {
+        background-position: left top, right bottom -24.5rem;
+    }
+
+    .title {
+        margin-left: 2.4rem;
+        margin-right: 2.4rem;
+    }
+
+    .about {
+        padding: 0 2.9rem;
+    }
+
+    .rating {
+        margin-left: 2.9rem;
+        margin-right: 2.9rem;
+    }
+
+    .reviews {
+        padding-left: 2.9rem;
+        padding-right: 2.9rem;
+    }
+}
+
+@media (min-width:425px) {
+    body {
+        background-size: 425px, 425px;
+        background-position: left top, right bottom -28.5rem;
+    }
+
+    .title {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .about {
+        padding: 0 4.4rem;
+    }
+
+    .rating {
+        margin-left: 4.4rem;
+        margin-right: 4.4rem;
+    }
+
+    .reviews {
+        padding-left: 4.4rem;
+        padding-right: 4.4rem;
+    }
+}
+
+@media (min-width:768px) {
+    body {
+        background-size: auto, 768px;
+        background-position: left top, right bottom -58.5rem;
+    }
+
+    .title {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .about {
+        padding: 0 4.4rem;
+    }
+
+    .rating {
+        margin-left: 4.4rem;
+        margin-right: 4.4rem;
+    }
+
+    .reviews {
+        padding-left: 4.4rem;
+        padding-right: 4.4rem;
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        background-image:
+            url(images/bg-pattern-top-desktop.svg),
+            url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat:
+            no-repeat,
+            no-repeat;
+        background-size: auto, auto;
+        background-position: left top, right bottom -8rem;
+        background-color: var(--neutralcolor3);
+        font-family: var(--ff-primary);
+        font-size: var(--fs-primary);
+
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: start;
+    }
+
+    .card {
+        padding: 3rem 12.5rem 0;
+        height: 85vh;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .title {
+        font-size: 3rem;
+        width: 65%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .about {
+        line-height: 1.2rem;
+        width: 75%;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .ratings {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: end;
+        padding: 0;
+        margin: 2rem 0 0 0;
+        width: 50%;
+    }
+
+    .rating {
+        padding: 0;
+        margin: 0;
+        width: 80%;
+    }
+
+    #rating1 {
+        margin-right: 5rem;
+    }
+
+    #rating2 {
+        margin-right: 2.5rem;
+    }
+
+    .rated::before {
+        display: inline-block;
+        margin: .5rem 1rem 0 1rem;
+    }
+
+    .reviews {
+        display: flex;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .review {
+        margin: 0;
+        height: 80%;
+    }
+
+    #review2 {
+        margin-top: 1rem;
+    }
+
+    #review3 {
+        margin-top: 2rem;
+    }
+}
